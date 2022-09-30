@@ -4,7 +4,7 @@ from .models import Company
 
 @admin.register(Company)
 class CompanyAdmin(admin.ModelAdmin):
-    list_display = ('name', 'type', 'selected')
-    list_filter = ('type', 'selected')
+    list_display = ('name', 'type')
+    list_filter = ('type',)
     search_fields = ('name',)
 
