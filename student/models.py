@@ -13,5 +13,8 @@ class Student(models.Model):
     password = models.CharField(max_length=100)
     phone = models.CharField(max_length=100, blank=True, null=True)
     roll = models.CharField(max_length=100)
+    branch = models.ForeignKey('Branch', on_delete=models.CASCADE)
+
+class Branch(models.Model):
     branch = models.CharField(max_length=100)
     batch = models.CharField(max_length=100)
