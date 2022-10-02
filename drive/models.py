@@ -25,5 +25,3 @@ class Drive(models.Model):
 class AllowedBranch(models.Model):
     drive = models.ForeignKey(Drive, on_delete=models.CASCADE)
     branch = models.ForeignKey('student.Branch', on_delete=models.CASCADE)
-    
-

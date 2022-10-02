@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Placement Buddy</title>
+  <link rel="stylesheet" href="{% static 'css/studentlogin.css' %}">
+</head>
+
+<body>
+  <div class="discription">
+    <h1>Welcome to Placement Buddy</h1>
+    <p>Students placement assistance portal</p>
+    <img src="{% static 'img/nithlogo.png' %}" alt="nithlogo">
+    <h3>Instruction</h3>
+    <p>Login using your institute email id.</p>
+
+
+  </div>
+
+
+
+  <div class="login">
+<h1>Sign-in to Placement Buddy</h1>
+    <form class="" action="index.html" method="post">
+        {% csrf_token %}
+
+      <input type="text" name="Email" value="" placeholder="Email">
+      <br>
+      <input type="text" name="Password" value="" placeholder="Password">
+      <br>
+      <input type="submit" name="submit" value="submit">
+    </form>
+
+  </div>
+</body>
+
+</html>
