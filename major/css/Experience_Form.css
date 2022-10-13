@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color:#02263c;
+}
+div{
+    padding: 10px;
+    margin: 10px 10px;
+    
+}
+div h1{
+    font-size: 4vmin;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+div h2{
+    font-size: 3vmin;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.form_section{
+    display: flex;
+    justify-content: center;
+}
+form{
+    padding: 50px;
+    margin: 10px;
+    align-items: center;
+    display: inline-block;
+    background-color:#013657;
+    color:white;
+    border:3px solid #01e0ff;
+    border-radius: 10px;
+}
+form label{
+    font-size: 2.4vmin;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+}
+form input{
+    font-size: 2.2vmin;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+form input:focus {
+    outline-color: #01e0ff;
+
+}
+form input::selection{
+    accent-color: #01e0ff;
+}
+form textarea{
+    padding: 5px;
+    margin: 10px;
+    font-size: 2vmin;
+    font-family: 'Montserrat', sans-serif;
+}
+form textarea:focus{
+    outline-color: #01e0ff;
+}
+.submit_button,.reset_button{
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    padding:6px 10px;
+}
+.submit_button{
+    border: 2px solid #01e0ff;
+    background-color: #01e0ff;
+}
+.reset_button{
+    background-color: white;
+    color: #01e0ff;
+    border: 2px solid #01e0ff;
+}
+.submit_button:hover{
+    background-color: #01c2db;
+    border: 2px solid #01c2db;
+
+}
+.reset_button:hover{
+    background-color: #01c2db;
+    color: white;
+}
+.radio_button_color{
+    accent-color: #01e0ff;
+}
