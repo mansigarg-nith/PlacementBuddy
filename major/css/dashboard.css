@@ -32,6 +32,7 @@ body{
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  padding: 5px;
   color: #ffff;
 }
 
@@ -53,22 +54,36 @@ width: 100vw;
 .menuleft{
   display: flex;
   flex-direction: column;
-  background-color: #02263c;
+  background-color: #013657;
   color: #ffff;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   height: 100%;
   width: 15%;
+}
+.heading{
+  font-size: 33px;
+  padding: 15px 0;
+}
+
+.dash{
+  font-size: 20px;
+  padding: 15px 0;
 }
 
 .menucenter{
   /* background-color: #DFF6FF; */
   /* background-color: #a8dadc; */
   width: 65%;
+
+}
+.companyName{
+  padding: 15px 25px;
 }
 
 .menuright{
   display: flex;
+  flex-direction: column;
   width: 20%;
   background-color: #013657;
   color: #ffff;
@@ -86,8 +101,13 @@ width: 100vw;
 
 .foot{
   text-align: center;
+
   height: 5%;
   width: 100vw;
   background-color: #02263c;
   color: #ffff;
+}
+
+.copyright{
+  padding: 7px;
 }
