@@ -66,11 +66,26 @@ width: 100vw;
   padding: 15px 0;
 }
 
-.dash{
+/* .dash{
   font-size: 20px;
   padding: 15px 0;
+} */
+
+.dash {
+    padding: 15px;
+    font-size: 22px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(225, 225, 225, 0.05);
 }
 
+.dash a {
+    color: #bdb8d7;
+    display: block;
+}
+
+.item:hover{
+    background: #594f8d;
+}
 .menucenter{
   /* background-color: #DFF6FF; */
   /* background-color: #a8dadc; */
