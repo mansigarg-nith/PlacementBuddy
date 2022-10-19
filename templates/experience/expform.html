@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITH Student Experience Form</title>
+
+    <!-- Link to CSS Experience Form file -->
+    <link rel="stylesheet" href="css/Experience_Form.css">
+</head>
+<body>
+    <div>
+        <h1 id="Heading">SHARE YOUR INTERVIEW EXPERIENCE WITH US</h1>
+        <h2>Interview Experience Form</h2>
+        <div class="form_section">
+           
+            <form action="{% url 'writeExperience' %}" method="post" target="_blank" autocomplete="on" novalidate>
+                {% csrf_token %}
+                <label >Your Identity</label><br>
+                <input type="radio" name="user_identity" id="user_identity1" value="Reveal" class="radio_button_color">
+                <label for="user_identity1">Reveal</label>
+                <input type="radio" name="user_identity" id="user_identity2" value="Anonymous" class="radio_button_color">
+                <label for="user_identity2">Keep Yourself Anonymous</label><br>
+
+                <label >Difficulty</label><br>
+                <input type="radio" name="difficulty" id="difficulty1" value="Easy" class="radio_button_color">
+                <label for="difficulty1">Easy</label>
+                <input type="radio" name="difficulty" id="difficulty2" value="Medium" class="radio_button_color">
+                <label for="difficulty2">Medium</label><br>
+                <input type="radio" name="difficulty" id="difficulty3" value="Hard" class="radio_button_color">
+                <label for="difficulty3">Hard</label><br>
+
+                <label for="company">Company Name </label><br>
+                <input type="text" name="user_company_name" id="company" size="40" maxlength="100" placeholder="Company's Name" required><br>
+
+                <label for="year">Year</label><br>
+                <input type="number" name="user_year" id="year" size="40" placeholder="year"><br>
+
+                {% comment %} <label>Experience Type</label><br>
+                <input type="radio" name="user_experience_type" id="experience_type1" value="Placement" class="radio_button_color">
+                <label for="experience_type1">Placement</label>
+                <input type="radio" name="user_experience_type" id="experience_type2" value="Internship" class="radio_button_color">
+                <label for="experience_type2">Internship</label><br> {% endcomment %}
+
+                <label for="role">Role</label><br>
+                <input type="text" name="user_role" id="role" size="40" placeholder="Eg - Full-time SDE,Full Stack Developer"><br>
+
+                <label for="experience">Share Your Interview Experience</label><br>
+                <textarea name="user_interview_experience" id="experience" cols="43" rows="10"></textarea><br>
+
+                <label for="result">Final Result</label><br>
+                <input type="radio" name="user_final_result" id="result1" value="Selected" class="radio_button_color">
+                <label for="result1">Selected</label>
+                <input type="radio" name="user_final_result" id="result2" value="Not Selected" class="radio_button_color">
+                <label for="result2">Not Selected</label><br><br>
+
+                <input class="reset_button" type="reset" value="Reset">
+                <input class="submit_button" type="submit" value="Submit">
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
