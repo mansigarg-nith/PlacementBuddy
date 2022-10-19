@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  .navi {
+    display: flex;
+  
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #02263c;
+    padding: 0 10px;
+    height: 10%;
+  
+  }
+  
+  .navi > .logo {
+    /* padding: 5px 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+  
+  }
+  
+  
+  .navi > .name{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 5px;
+    color: #ffff;
+  }
+  
+  .logonith{
+    padding: 0 5px;
+  }
+  
+  
+  
+  /* <!-- ----------- main -------- --> */
+  
+  .main{
+    display: flex;
+    flex-wrap: wrap;
+  height: 85%;
+  width: 100vw;
+  }
+  
+  .menuleft{
+    display: flex;
+    flex-direction: column;
+    background-color: #013657;
+    color: #ffff;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 15%;
+  }
+  .heading{
+    font-size: 33px;
+    padding: 15px 0;
+  }
+  
+  /* .dash{
+    font-size: 20px;
+    padding: 15px 0;
+  } */
+  
+  .dash {
+      padding: 15px;
+      font-size: 22px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: 1px solid rgba(225, 225, 225, 0.05);
+  }
+  
+  .dash a {
+      color: #bdb8d7;
+      display: block;
+  }
+  
+  .item:hover{
+      background: #594f8d;
+  }
+  .menucenter{
+    /* background-color: #DFF6FF; */
+    /* background-color: #a8dadc; */
+    width: 65%;
+  
+  }
+  .companyName{
+    padding: 15px 25px;
+  }
+  
+  .menuright{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: #013657;
+    color: #ffff;
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* ------------------ footer ----------- */
+  
+  .foot{
+    text-align: center;
+  
+    height: 5%;
+    width: 100vw;
+    background-color: #02263c;
+    color: #ffff;
+  }
+  
+  .copyright{
+    padding: 7px;
+  }

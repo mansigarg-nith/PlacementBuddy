@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
@@ -15,7 +16,9 @@ def login(request):
         password = request.POST['Password']
         user = auth.authenticate(username = username, password=password)
         if user is not None:
+            context = {'username' : username}
             auth.login(request, user)
+            return render(request,'dashboard.html',context)
         else:
             return HttpResponseRedirect(request.path_info)
     return render(request, 'studentlogin.html')

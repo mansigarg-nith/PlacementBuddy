@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>dashboard</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+  <script src="https://kit.fontawesome.com/5089963897.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="navi">
+    <div class="logo">
+        {% load static %}
+      <img class="logonith" src="{% static 'img/nithlogo.png' %}" alt="NITH" height="50px" width="50px">
+      <h1>Placement Buddy</h1>
+    </div>
+    <div class="name">
+      <h3>Hello, {{ username}}</h3>
+    </div>
+  </div>
+
+  <section class="main">
+    <div class="menuleft">
+      <h1 class="heading">DASHBOARD</h1>
+
+      <ul style="list-style: none;">
+        <li class="item"><a href="#"  style="text-decoration: none; color : white"><i class="fas fa-home dash"></i> Homepage</a></li>
+        <li class="item"><a href="#"  style="text-decoration: none; color : white"><i class="fa-solid fa-magnifying-glass dash"></i> Experience</a></li>
+        <li class="item"><a href="#"  style="text-decoration: none; color : white"><i class="fa-solid fa-pencil dash"></i> Post Experience</a></li>
+        <li class="item"><a href="#"  style="text-decoration: none; color : white"><i class="fa-sharp fa-solid fa-chart-simple dash"></i> Statistics</a></li>
+        <li class="item"><a href="#"  style="text-decoration: none; color : white"><i class="fa-solid fa-book dash"></i> Resources</a></li>
+        <li class="item"><a href="#"  style="text-decoration: none; color : white"><i class="fa-solid fa-wallet dash"></i> Drive</a></li>
+      </ul>
+    </div>
+    <div class="menucenter">
+      <h1 class="companyName">List of Companies:</h1>
+      <ul class="companyName">
+        <li>Adobe</li>
+        <li>Samsung</li>
+        <li>Media.net</li>
+      </ul>
+    </div>
+    <div class="menuright">
+
+      <h1>pie chart</h1>
+      <br>
+      <h1>bar chart</h1>
+    </div>
+
+  </section>
+
+  <!-- footer -->
+
+  <div class="foot">
+
+    <p class="copyright">Made with ❤ by Developers</p>
+
+
+  </div>
+
+</body>
+
+
+</html>
