@@ -7,19 +7,21 @@
 }
 
 @media screen and (min-width: 1001px) {
-    body{
+    body {
         font-size: 1.25vw;
     }
-    .wrapper .sidebar{
+
+    .wrapper .sidebar {
         width: 15%;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    body{
+    body {
         font-size: 2vw;
     }
-    .wrapper .sidebar{
+
+    .wrapper .sidebar {
         width: 30%;
     }
 }
@@ -39,8 +41,12 @@ body {
 }
 
 .wrapper {
-    display: flex;
     position: relative;
+}
+
+
+.wrapper .profile-button {
+    float: right;
 }
 
 .wrapper .sidebar {
@@ -74,4 +80,19 @@ body {
 
 .wrapper .sidebar ul li:hover {
     background: #594f8d;
+}
+
+.btn-circle.btn-xl {
+    height: 40px;
+    width: 40px;
+    padding: 13px 18px;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: left;
+}
+
+.wrapper .profile-button .dropdown .dot{
+    position:relative;
+    left: calc(50% - 4px);
+    top: calc(50% - 10px); /* 50% - 3/4 of icon height */
 }
