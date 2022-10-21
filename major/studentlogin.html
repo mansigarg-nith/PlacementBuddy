@@ -5,15 +5,19 @@
   <meta charset="utf-8">
   <title>Placement Buddy</title>
   <link rel="stylesheet" href="css/studentlogin.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   
+
 </head>
 
 <body>
   <div class="discription">
-    <h1>Welcome to Placement Buddy</h1>
-    <p>Students placement assistance portal</p>
-    <img src="images/nithlogo.png" alt="nithlogo">
-    <h3>Instruction</h3>
-    <p>Login using your institute email id.</p>
+    <h1 class="welcome">Welcome to Placement Buddy</h1>
+    <p class="instruction">Students placement assistance portal</p>
+    <img src="images/nithlogo.png" alt="nithlogo" height="280px" width="280px">
+    <h3 class="guide">Instruction</h3>
+    <p class="instruction">Login using your institute email id.</p>
 
 
   </div>
@@ -21,15 +25,21 @@
 
 
   <div class="login">
-<h1>Sign-in to Placement Buddy</h1>
-    <form class="" action="index.html" method="post">
+    <h1 class="signin">Sign-in to Placement Buddy</h1>
 
-      <input type="text" name="Email" value="" placeholder="Email">
-      <br>
-      <input type="text" name="Password" value="" placeholder="Password">
-      <br>
-      <input type="button" name="submit" value="submit">
-    </form>
+    <div class="login-box" >
+    	<div class="login-header">Login</div>
+    	<div class="login-body">
+    		<form class="form-group">
+    			<label>Username</label>
+    			<input type="text" class="form-control" name="">
+    			<label>Password</label>
+    			<input type="password" class="form-control" name="">
+    			<br>
+    			<input type="submit" value="Login" class="form-control btn btn-success " name="">
+    		</form>
+    	</div>
+    </div>
 
   </div>
 </body>
