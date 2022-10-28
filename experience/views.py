@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from drive.models import Drive
-import experience
+
 from student.models import Student
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 # Create your views here.
-@login_required
+@login_required(login_url='logapp/studentlogin.html')
 def writeExperience(request):
     if request.method == 'POST':
         user = request.user

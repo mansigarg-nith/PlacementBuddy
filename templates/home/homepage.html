@@ -1,0 +1,313 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NIT Hamirpur Placements</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!-- Linking CSS File -->
+    <link rel="stylesheet" href="{% static 'css\homepage.css' %}">
+    <!-- Google Fonts Start -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- To Use FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar Starts Here-->
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <label class="logo">NIT Hamirpur</label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About NITH</a></li>
+        <li><a href = "#link1">Director's Message</a></li>
+        <li><a href="#link2">Recruitment Process</a></li>
+        <li><a href="#">Statistics</a></li>
+        <li><a href="#link3">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Navigation Bar Ends Here -->
+    <!-- Header of the Website -->
+    <header>
+      <div class="header_box">
+        <div class="header_content">
+          <h2>NITH Portal for Placements</h2>
+          <p>
+            NIT Hamirpur offers Undergraduate, Postgraduate and doctoral courses
+            in 13 academic departments and two centres in the disciplines of
+            Engineering, Architecture, Science, Humanities & Social Science and
+            Management. At the UG level, NIT Hamirpur courses include a
+            four-year BTech course, a five-year in BArch and a five–year
+            BTech-MTech dual degree. Additionally, at PG levels, NIT Hamirpur
+            courses include a two-year MTech, a two-year MBA, a two-year MSc and
+            a two-year MArch. All the PG courses are for four semesters. At the
+            doctoral level, NIT Hamirpur offers PhD courses in full-time and
+            part-time mode.
+          </p>
+        </div>
+        <div class="dashboard_content">
+          <ul>
+            <li><a href="user/login">Student</a></li>
+            <li><a href="#">Recruiter</a></li>
+            <li><a href="#">Coordinator</a></li>
+            <li><a href="#">Verifier</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!------------- Header Ends Here --------------->
+
+    <!-------------- Dashboard Starts Here ------------>
+    <!-- <section class="dashboard">
+      <div class="dashboard_title">
+        <h3>Dashboard</h3>
+      </div>
+      <div class="dashboard_content">
+        <ul>
+          <li><a href="#">Student</a></li>
+          <li><a href="#">Recruiter</a></li>
+          <li><a href="#">Coordinator</a></li>
+          <li><a href="#">Verifier</a></li>
+        </ul>
+      </div>
+    </section> -->
+    <!-------------- Dashboard Starts Here ------------>
+
+    <!-- -------------- Overview Starts Here ------------- -->
+
+    <section class="overview">
+      <div class="overview_box">
+        <div class="container">
+          <h4>Academic Facilities</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            sunt aspernatur, non numquam fugit dolorum laboriosam sint officia
+            tempora nemo. Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Adipisci, fuga....
+          </p>
+          <a href="#">read more</a>
+        </div>
+        <div class="container">
+          <h4>Academic Facilities</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            sunt aspernatur, non numquam fugit dolorum laboriosam sint officia
+            tempora nemo. Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Adipisci, fuga....
+          </p>
+          <a href="#">read more</a>
+        </div>
+        <div class="container">
+          <h4>Academic Facilities</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            sunt aspernatur, non numquam fugit dolorum laboriosam sint officia
+            tempora nemo. Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Adipisci, fuga....
+          </p>
+          <a href="#">read more</a>
+        </div>
+        <div class="container">
+          <h4>Academic Facilities</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            sunt aspernatur, non numquam fugit dolorum laboriosam sint officia
+            tempora nemo. Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Adipisci, fuga....
+          </p>
+          <a href="#">read more</a>
+        </div>
+      </div>
+    </section>
+    <!--  --------------- Overview Ends Here ------------- -->
+
+    <!-- ---------------- Placement Record ------------- -->
+    <section class="placement_record">
+      <div><a href="{% static 'pdff/tpobrochure.pdf'%}">Placement Broucher 2022-23</a></div>
+      <div><a href="#">Placement Reports</a></div>
+      <div><a href="#">Placement Notifications</a></div>
+      <div><a href="#">Recent Achievement</a></div>
+    </section>
+    <!-- ----------------- Placement Record Ends Here ------------ -->
+
+    <!-- ----------------- Why NITH Starts Here ----------------- -->
+    <section class="why_nith">
+      <div class="why_nith_box">
+        <h3>Why NIT Hamirpur</h3>
+        <div class="line"></div>
+        <p>
+          Established in 1958, as an institute of national importance, IIT
+          Bombay is recognized worldwide as a leader in the field of research
+          and education in engineering and sciences. Our mission is to create an
+          ambience in which new ideas and creativity flourish. The motto of IIT
+          Bombay is to provide learning blended with excellence, to create
+          leaders of tomorrow. The dynamic and constantly evolving academic
+          program reflects the institute's commitment to stay in tune with the
+          expanding frontiers of knowledge worldwide. Extracurricular activities
+          are also treated with equal importance towards overall development
+          making the students at IIT Bombay fit to take on the challenges faced
+          in the competitive corporate world. Backed by the support of Alumni in
+          different sectors and guidance of esteemed professors, we strive to
+          offer highly nurturing environment to all it's students.
+        </p>
+      </div>
+      <div class="why_nith_card">
+        <div>
+          <h4>Lorem, ipsum.</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            doloremque qui debitis nobis aspernatur optio repellendus
+            consequuntur nisi distinctio, ipsam, quis aut exercitationem. Lorem
+            ipsum dolor sit, amet consectetur adipisicing elit. Illum, at.
+          </p>
+          <a href="#">read more</a>
+        </div>
+        <div>
+          <h4>Lorem, ipsum.</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            doloremque qui debitis nobis aspernatur optio repellendus
+            consequuntur nisi distinctio, ipsam, quis aut exercitationem.
+          </p>
+          <a href="#">read more</a>
+        </div>
+        <div>
+          <h4>Lorem, ipsum.</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            doloremque qui debitis nobis aspernatur optio repellendus
+            consequuntur nisi distinctio, ipsam, quis aut exercitationem.
+          </p>
+          <a href="#">read more</a>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------- Why NITH Ends Here ------------------- -->
+
+    <!-- ------------------- Director's Message Starts Here -------------- -->
+    <section class="director_box" id = "link1">
+      <div class="director_title">
+        <h4>DIRECTOR'S MESSAGE</h4>
+        <div class="line"></div>
+      </div>
+      <div class="director_content">
+        <div class="director_image">
+          <img
+            src="{% static 'img/NITHDirector.png'%}"
+            alt="Director's Picture"
+          />
+        </div>
+        <div class="director_message">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
+            magni, optio perferendis autem eligendi vero, similique nobis, vel
+            dignissimos fugiat iste? Iste natus et amet? Lorem ipsum dolor sit
+            amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Pariatur nulla tempora aut quod dolore delectus
+            provident inventore modi magni non!....
+          </p>
+          <a href="#">read more</a>
+          <h4>Prof. Hiralal Murlidhar Suryawanshi</h4>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------- Director's Message Ends Here -------------- -->
+
+    <!-- ------------------- Recruitment Process -------------------- -->
+    <section class="recruitment_process" id = "link2">
+      <div class="recruitment_title">
+        <h4>Recruitment Process</h4>
+      </div>
+      <div class="recruitment_box">
+        <div>
+          <h6>Step 1</h6>
+          <p>NIT Hamirpur invites the companies for placement drives</p>
+        </div>
+        <div>
+          <h6>Step 2</h6>
+          <p>Companies share the Filled JNF Form.</p>
+        </div>
+        <div>
+          <h6>Step 3</h6>
+          <p>
+            We share the database of students as per the eligibility criteria.
+          </p>
+        </div>
+        <div>
+          <h6>Step 4</h6>
+          <p>Companies shortlist the students based on their requirements.</p>
+        </div>
+        <div>
+          <h6>Step 5</h6>
+          <p>
+            Companies visit NIT Hamirpur for Recruitment drive which includes
+            the following steps: (Introductory Presentation by Company
+            Executives, On Line Exam or Paper-Pen test, Group Discussion and
+            Final Interviews).
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------- Recruitment Process ends here -------------------- -->
+
+    <!-- ------------------- Contact Us Section Starts here -------------------- -->
+
+    <section class="contact" id = "link3">
+      <div class="contact_title">
+        <h4>Contact Us</h4>
+      </div>
+      <div class="contact_box">
+        <div>
+          <img src="{% static 'img/Dr.BharatBhushanSharma.jpg'%}" alt="Image" />
+        </div>
+        <div class="details">
+          <h5>Faculty Incharge (Training and Placement)</h5>
+          <div>
+            <h6>Dr. Bharat Bhushan Sharma</h6>
+            <p>Department of Electrical Engineering</p>
+            <p>
+              Email : <a href="#">tpo@nith.ac.in</a> ,<a href="#"
+                >tponith@gmail.com</a
+              >
+            </p>
+            <p>Phone No: 01972-254591 , 01972-254590</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <p>
+          © 2022 All Rights Reserved, National Institute of Technology Hamirpur
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

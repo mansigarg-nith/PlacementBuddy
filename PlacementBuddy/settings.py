@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'company',
     'experience',
     'logapp',
+    'home',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -61,7 +62,7 @@ ROOT_URLCONF = 'PlacementBuddy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates/logapp', 'templates/student', 'templates/company', 'templates/drive', 'templates/experience',],
+        'DIRS': ['templates/logapp', 'templates/student', 'templates/company', 'templates/home','templates/drive', 'templates/experience',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

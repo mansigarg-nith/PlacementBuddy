@@ -1,0 +1,476 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family:'Montserrat', sans-serif;
+  }
+  /* --------------- Header  Starts Here ----------------- */
+    /* --------------- Navigation Bar Starts Here ----------------- */
+  nav{
+    background-color: #0c1b35;
+    width: 100%;
+  }
+  label.logo{
+    color: white;
+    font-size: 3vmin;
+    line-height: 50px;
+    padding: 0px 30px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0px 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 2vmin;
+    text-decoration: none;
+  }
+  a.active,a:hover{
+    color: hwb(0 11% 13%);
+    transition: 0.3s;
+    font-weight: bold;
+  }
+  
+  .checkbtn{
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  
+    /* --------------- Navigation Bar Ends Here ----------------- */
+  
+    /* ----------------- Header Starts Here --------------- */
+  header{
+    background: url('images/310397.jpeg');
+    background-position:center;
+    background-size: cover;
+    padding: 20px;
+  
+  }
+  .header_box{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .dashboard_content{
+    background-color: rgba(59, 59, 59, 0.335);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    
+  }
+  .dashboard_content li{
+    background-color: #a9c8fe;
+    padding: 10px;
+    margin: 10px;
+    border:1px solid rgba(0, 0, 255, 0.421);
+    border-radius: 10px;
+  }
+  .dashboard_content li a{
+    padding: 10px;
+    text-decoration: none;
+    font-size: 2vmin;
+    color:#0c1b35;
+  }
+  .dashboard_content li a:hover{
+    padding: 10px;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+  }
+  .header_content{
+    margin: 20px;
+    padding: 20px;
+    background: #0c1b35b5;
+    border-radius: 20px;
+    color: whitesmoke;
+    text-align:left;
+  }
+  .header_content h2{
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 3vmin;
+    color: white;
+  }
+  .header_content p{
+    margin-bottom: 30px;
+    color: whitesmoke;
+    font-size: 2vmin;
+  }
+  /* --------------- Header Ends Here ----------------- */
+  
+  /* ---------------- Overview Starts Here ---------------- */
+  .overview{
+    background-color: rgb(255, 255, 255);
+  }
+  .overview_box{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 30px;
+    margin: 20px;
+  }
+  .container{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color:#e8e5e569;
+    border: 5px solid #fc25251a;
+    padding: 20px;
+    margin: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  
+  }
+  .container h4{
+    font-size: 3vmin;
+    color:#530707;
+    font-weight: bold;
+    
+  }
+  .container p{
+    font-size: 2vmin;
+  }
+  .container a{
+    font-size: 2vmin;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+  }
+  .container a:hover{
+    background-color: #a9c8fe;
+    transition: .5s;
+    border-radius: 5px;
+  }
+  /*  -------------- Overview Ends Here -------------------- */
+  
+  /* --------------- Placement Records Starts Here --------------- */
+  .placement_record{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color:#879bbe;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .placement_record div{
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color:#530707;
+  }
+  .placement_record div a{
+    color: white;
+    text-decoration: none;
+  }
+  .placement_record div:hover{
+    background-color:#0c1b35;
+    transition: .5s;
+  }
+  /* --------------- Placement Records Ends Here --------------- */
+  
+  /* --------------- Why NIT Hamirpur Starts Here --------------- */
+  .why_nith{
+    background-color: #0c1b35;
+    width: 100%;
+    padding: 50px;
+  }
+  .why_nith div{
+    color: white;
+  }
+  .why_nith_box h3{
+    text-align: center;
+    padding: 10px 10px 0px;
+    font-size: 4vmin;
+  }
+  .why_nith_box .line{
+    margin: auto;
+    width: 25%;
+    height: 3px;
+    background-color:#a60909;
+  
+  }
+  .why_nith_box p{
+    font-size: 2vmin;
+    text-align: center;
+    padding: 20px;
+  }
+  .why_nith_card{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+  }
+  .why_nith_card div{
+    font-size: 2vmin;
+    margin: 20px;
+    padding: 20px;
+    background-color:#ffffff1c;
+    border-radius: 10px;
+  }
+  .why_nith_card div a{
+    font-size: 2vmin;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  .why_nith_card div a:hover{
+    background-color: #c0c0c05f;
+  
+  }
+  /* ------------------- Why NIT Hamirpur Ends Here ----------------- */
+  
+  /* -------------------- Director's Message Starts Here ------------------ */
+  .director_box{
+    padding: 50px;
+    width: 100%;
+  }
+  .director_title h4{
+    text-align: center;
+    padding: 20px 20px;
+    padding-bottom: 0px;
+    font-size: 4vmin;
+    color:#0c1b35;
+    font-weight:bold;
+  
+  }
+  .director_content{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+  .director_image{
+    border: 2px solid rgb(184, 184, 184);
+    border-radius: 5px;
+    align-items: center;
+    margin: auto;
+    
+  }
+  .director_image:hover{
+    border-color:#530707;
+    
+  }
+  
+  .director_image img{
+    border-radius: 5px;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .director_message{
+    padding: 20px;
+    text-align:left;
+    font-size: 2vmin;
+    
+  }
+  .director_message a{
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: darkblue;
+  }
+  .director_message a:hover{
+  
+    background-color: #c0c0c05f;
+  }
+  .director_message h4{
+    padding: 50px;
+    padding-left: 0px;
+    color: #0c1b35;
+  }
+  /* -------------------- Director's Message Starts Here ------------------ */
+  
+  /* -------------------- Recruitment Process Begins Here ----------------- */
+  .recruitment_process{
+    width: 100%;
+    background-color: #0c1b35;
+    padding: 20px;
+  }
+  .recruitment_title h4{
+    font-size: 4vmin;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+  }
+  .recruitment_box{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+  }
+  .recruitment_box div{
+    font-size: 2vmin;
+    padding: 10px;
+    color: white;
+    background-color: #ababab4d;
+    border-radius: 5px;
+  }
+  .recruitment_box h6{
+    color: rgb(135, 135, 251);
+    font-size: 2vmin;
+  }
+  /* -------------------- Recruitment Process Section Ends Here ----------------- */
+  
+  /* -------------------- Contact Us Section Starts Here ----------------- */
+  
+  .contact{
+    width: 100%;
+    padding: 50px;
+  }
+  .contact_title{
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+  }
+  .contact_title h4{
+    font-size: 4vmin;
+    color: #142e57;
+    font-weight: bold;
+  }
+  .contact_box{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    background-color: #b7cff8;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .details{
+    padding: 5px;
+  }
+  .details h5{
+    font-size: 3vmin;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+  }
+  .details h6{
+    font-size: 2vmin;
+    font-weight: bold;
+  }
+  .details p{
+    font-size: 2vmin;
+  }
+  .details a{
+  
+    text-decoration: none;
+  }
+  
+  .contact_box div img{
+    justify-content: center;
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* -------------------- Contact Us Section Starts Here ----------------- */
+  
+  /* -------------------- Footer Starts ------------------- */
+  footer{
+    background-color:#0c1b35;
+    width: 100%;
+  }
+  footer div p{
+    padding: 10px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+  }
+  /* --------------------- Footer Ends ---------------------*/
+  
+  
+  
+  @media (max-width: 1024px){
+    label.logo{
+      font-size: 3vmin;
+      padding-left: 30px;
+    }
+    /* ---------------- Overview Starts Here ---------------- */
+    .overview_box{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: space-evenly;
+      gap: 20px;
+      padding: 30px;
+      margin: 20px;
+    }
+    /* ---------------- Overview Ends Here ---------------- */
+  
+    /* --------------- Placement Records Starts Here --------------- */
+  .placement_record{
+    display: grid;
+    grid-template-columns: auto auto;
+    
+    }
+    /* --------------- Why NIT Hamirpur ---------------- */
+    .why_nith_card{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+  }
+  @media (max-width:900px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      background-color:#142e57;
+      top: 50px;
+      left:-100%;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    nav ul li{
+      margin: 20px;
+      display: block;
+  
+    }
+    nav ul li a{
+      font-size: 2vmin;
+    }
+    a:hover,a.active{
+      color:red;
+    
+    }
+    #check:checked ~ul{
+      left: 0;
+  
+    }
+    /* -----------------------  Header Starts Here ------------------- */
+    .header_box{
+      display: grid;
+      grid-template-columns: auto;
+    }
+    /* ---------------- Overview Starts Here ---------------- */
+    .overview_box{
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-evenly;
+      gap: 50px;
+      padding: 30px;
+      margin: 20px;
+    }
+    /* ---------------- Overview Ends Here ---------------- */
+  }
