@@ -1,15 +1,19 @@
-from django.shortcuts import render
+from http.client import HTTPResponse
+from django.shortcuts import render, redirect
 from drive.models import Drive
 
 from student.models import Student
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+
 # Create your views here.
-@login_required(login_url='logapp/studentlogin.html')
+# @login_required(login_url='logapp/studentlogin.html')
 def writeExperience(request):
+    if not request.user.is_authenticated:
+        return render(request, 'studentlogin.html')
     if request.method == 'POST':
         user = request.user
-        anonymity = request.POST.get('user_identity1')
+        anonymity = request.POST.get('user_identity')
         company_name = request.POST.get('user_company_name')
         role = request.POST.get('user_role')
         difficulty1 = request.POST.get('user_difficulty1')
