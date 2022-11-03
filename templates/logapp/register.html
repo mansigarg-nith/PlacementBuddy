@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="{% static 'css/register.css'%}">
+</head>
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
+            <label class="sign-in">Sign Up</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <form action="register" method = "post">
+                        {% csrf_token %}
+                    <div class="group">
+                        <label for="username" class="label">Username</label>
+                        {{ form.username }}
+                        <!-- <input id="username" type="text" class="input"> -->
+                    </div>
+                    <div class="group">
+                        <label for="first_name" class="label">First Name</label>
+                        {{ form.first_name }}
+                        <!-- <input id="first_name" type="text" class="input"> -->
+                    </div>
+                    <div class="group">
+                        <label for="last_name" class="label">Last Name</label>
+                        {{ form.last_name }}
+                       <!-- <input id="last_name" type="text" class="input">--> 
+                    </div>
+                    <div class="group">
+                        <label for="user_email" class="label">E-mail Address</label>
+                        {{ form.email }}
+                       <!-- <input id="user_email" type="email" class="input"> -->
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        {{ form.password1 }}
+                        <!-- <input id="pass" type="password" class="input" data-type="password"> -->
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Confirm Password</label>
+                        {{ form.password2 }}
+                       <!--  <input id="pass" type="password" class="input" data-type="password"> -->
+                    </div>
+                    <div class="hr"></div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign In">
+                    </div>
+                    </form>
+                    <div class="foot-lnk">
+                        <a href="/user/login">Already Registered?</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

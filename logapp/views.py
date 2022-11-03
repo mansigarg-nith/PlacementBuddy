@@ -21,7 +21,7 @@ def login(request):
             return render(request,'dashboard.html',context)
         else:
             return HttpResponseRedirect(request.path_info)
-    return render(request, 'studentlogin.html')
+    return render(request, 'login.html')
 
 def register(request):
     if request.method == 'POST':
@@ -32,7 +32,7 @@ def register(request):
             if re.search(patt,em) == None:
                 messages.info(request,f'use your college email')
                 context = {'form': form}
-                return render(request, 'studentregister.html',context)
+                return render(request, 'login.html',context)
             form.save()
 
             #messages.success(request, f'Your account has been created. You can log in now!')    
@@ -41,7 +41,7 @@ def register(request):
         form = UserRegistrationForm()
 
     context = {'form': form}
-    return render(request, 'studentregister.html', context)
+    return render(request, 'register.html', context)
 
         
    
