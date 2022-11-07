@@ -1,5 +1,6 @@
 from email.policy import default
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Experience(models.Model):
@@ -7,7 +8,7 @@ class Experience(models.Model):
     anonymity = models.BooleanField(default=False)
     student = models.ForeignKey('student.Student', on_delete=models.CASCADE)
     drive = models.ForeignKey('drive.Drive', on_delete=models.CASCADE)
-    exp = models.TextField(max_length=5000, default = 'My Exp')
+    exp = RichTextField()
     difficulty = models.CharField(choices=choice, default = "1", max_length = 6)
     verdict = models.BooleanField()
 

@@ -9,6 +9,8 @@
 
     <!-- Link to CSS Experience Form file -->
     <link rel="stylesheet" href="{% static 'css/Experience_Form.css' %}">
+    <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
+
 </head>
 <body>
     <div>
@@ -44,11 +46,14 @@
                 <input type="radio" name="user_experience_type" id="experience_type2" value="Internship" class="radio_button_color">
                 <label for="experience_type2">Internship</label><br> {% endcomment %}
 
-                <label for="role">Role</label><br>
-                <input type="text" name="user_role" id="role" size="40" placeholder="Eg - Full-time SDE,Full Stack Developer"><br>
-
+            
                 <label for="experience">Share Your Interview Experience</label><br>
                 <textarea name="user_interview_experience" id="experience" cols="43" rows="10"></textarea><br>
+                <script>
+                    // Replace the <textarea id="editor1"> with a CKEditor 4
+                    // instance, using default configuration.
+                    CKEDITOR.replace( 'user_interview_experience' );
+                </script>
 
                 <label for="result">Final Result</label><br>
                 <input type="radio" name="user_final_result" id="result1" value="Selected" class="radio_button_color">

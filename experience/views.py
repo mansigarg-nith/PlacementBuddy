@@ -11,6 +11,7 @@ from django.contrib.auth.decorators import login_required
 def writeExperience(request):
     if not request.user.is_authenticated:
         return render(request, 'studentlogin.html')
+    
     if request.method == 'POST':
         user = request.user
         anonymity = request.POST.get('user_identity')
@@ -36,4 +37,5 @@ def writeExperience(request):
         exp.save()
         messages.success(request,'Data has been submitted')
         return render(request, 'experience/writeExperience.html')
+   
     return render(request, 'expform.html')
