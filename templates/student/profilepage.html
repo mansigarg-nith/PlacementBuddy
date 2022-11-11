@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <script
+      src="https://kit.fontawesome.com/bcc7e27234.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/profile_page.css" />
+  </head>
+  <body>
+    <div class="info_division">
+      <h2>Update Profile</h2>
+      <hr id="update_line" />
+      <form action="/actionfile.php" method="post">
+        <div class="group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="User_Name"
+            id="username"
+            value="rakesh_13_11"
+            maxlength="50"
+          />
+        </div>
+        <div class="group">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            name="First_Name"
+            id="fname"
+            value="Rakesh"
+            maxlength="50"
+          />
+        </div>
+        <div class="group">
+          <label for="mname">Middle Name</label>
+          <input
+            type="text"
+            name="Middle"
+            id="mname"
+            value="Kumar"
+            maxlength="50"
+          />
+        </div>
+
+        <div class="group">
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            name="Last_Name"
+            id="lname"
+            value="Meena"
+            maxlength="50"
+          />
+        </div>
+        <div class="group">
+          <label for="rollno">Roll No</label>
+          <input
+            type="text"
+            name="Roll_No"
+            id="rollno"
+            value="195119"
+            maxlength="10"
+          />
+        </div>
+        <div class="group">
+          <label for="branch">Branch</label>
+          <select id="branch" name="Branch">
+            <option value="No_Branch" selected>Select Your Branch</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Computer Science and Engineering">Computer Science and Engineering(B.Tech)</option>
+            <option value="Computer Science and Engineering">Computer Science and Engineering (Dual Degree)</option>
+            <option value="Electrical and Electronics Engineering">Electrical Engineering</option>
+            <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+            <option value="Electronics and Communication Engineering">Electronics and Communication Engineering (Dual Degree)</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Material Science">Material Science</option>
+            <option value="Mathematics and Computing">Mathematics and Computing</option>  
+          </select>
+          <!-- <label for="branch">Branch</label>
+          <input
+            type="text"
+            name="Branch"
+            id="branch"
+            value=""
+            maxlength="10"
+          /> -->
+        </div>
+        <div class="group">
+          <label for="phoneno">Contact No</label>
+          <input
+            type="tel"
+            name="Phone_No"
+            id="phoneno"
+            value="1234567890"
+            maxlength="10"
+          />
+        </div>
+        <div class="group">
+          <label for="pass1">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="pass1"
+            value="mypassword%3^#@"
+            maxlength="50"
+          />
+
+          <input type="checkbox" onclick="showpass()" id="checkbx" /> Show
+          Password
+        </div>
+        <div class="group">
+          <label for="pass2">Confirm Password</label>
+          <input
+            type="password"
+            name="password"
+            id="pass2"
+            value="mypassword%3^#@"
+            maxlength="50"
+          />
+        </div>
+        <div class="group">
+          <label for="email1">E-mail</label>
+          <input
+            type="email"
+            name="Email"
+            id="email1"
+            value="xyz@gamil.com"
+            maxlength="100"
+          />
+        </div>
+        <div class="group">
+          <label for="email2">Confirm E-mail</label>
+          <input
+            type="email"
+            name="Email"
+            id="email2"
+            value="xyz@gmail.com"
+            maxlength="50"
+          />
+        </div>
+        <input id="button" type="submit" value="Update Info" />
+      </form>
+    </div>
+    <script>
+      function showpass() {
+        var x = document.getElementById("pass1");
+        var y = document.getElementById("pass2");
+
+        if ((x.type && y.type) === "password") {
+          x.type = "text";
+          y.type = "text";
+        } else {
+          x.type = "password";
+          y.type = "password";
+        }
+      }
+    </script>
+  </body>
+</html>

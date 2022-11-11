@@ -1,12 +1,12 @@
 from multiprocessing import context
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django.contrib.auth.models import User, auth
+from django.contrib.auth.models import User
+from django.contrib.auth import logout
+from django.contrib import auth
 from .forms import UserRegistrationForm
 from django.contrib import messages
 import re
-
-
 
 
 # Create your views here.
@@ -16,9 +16,10 @@ def login(request):
         password = request.POST['Password']
         user = auth.authenticate(username = username, password=password)
         if user is not None:
+            #print(user)
             context = {'username' : username}
-            auth.login(request, user)
-            return render(request,'dashboard.html',context)
+            auth.login(request,user)
+            return render(request,'navbar.html',context)
         else:
             return HttpResponseRedirect(request.path_info)
     return render(request, 'login.html')
@@ -42,6 +43,11 @@ def register(request):
 
     context = {'form': form}
     return render(request, 'register.html', context)
+
+def view_logout(request):
+    logout(request)
+    return redirect("/")
+    
 
         
    
