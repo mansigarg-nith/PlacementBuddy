@@ -17,7 +17,7 @@ def login(request):
         user = auth.authenticate(username = username, password=password)
         if user is not None:
             #print(user)
-            context = {'username' : username}
+            context = {'user' : request.user}
             auth.login(request,user)
             return render(request,'navbar.html',context)
         else:

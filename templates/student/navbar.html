@@ -39,7 +39,7 @@
           <span class="dot"><i class="fa-solid fa-user"></i></span>
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">{{username}}</a></li>
+          <li><a class="dropdown-item" href="{%url 'profileupdate' %}">{{user.username}}</a></li>
           <li><a class="dropdown-item" href="/user/logout">Logout</a></li>
         </ul>
       </div>

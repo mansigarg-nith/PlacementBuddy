@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,67 +10,70 @@
       src="https://kit.fontawesome.com/bcc7e27234.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/css/profile_page.css" />
+    <link rel="stylesheet" href="{%static 'css/profile_page.css'%}" />
   </head>
   <body>
-    <div class="info_division">
+    
+     <div class="info_division">
       <h2>Update Profile</h2>
       <hr id="update_line" />
-      <form action="/actionfile.php" method="post">
+      <form action="{% url 'profileupdate'  %}" method="post">
+        {%csrf_token%}
         <div class="group">
           <label for="username">Username</label>
           <input
             type="text"
             name="User_Name"
             id="username"
-            value="rakesh_13_11"
             maxlength="50"
+            value= {{user.username}}
+            readonly
           />
         </div>
         <div class="group">
           <label for="fname">First Name</label>
-          <input
+          <!-- <input
             type="text"
             name="First_Name"
             id="fname"
-            value="Rakesh"
             maxlength="50"
-          />
+          /> -->
+          {{form.fname}}
         </div>
         <div class="group">
           <label for="mname">Middle Name</label>
-          <input
+          <!-- <input
             type="text"
             name="Middle"
             id="mname"
-            value="Kumar"
             maxlength="50"
-          />
+          /> -->
+          {{form.mname}}
         </div>
 
         <div class="group">
           <label for="lname">Last Name</label>
-          <input
+          <!-- <input
             type="text"
             name="Last_Name"
             id="lname"
-            value="Meena"
             maxlength="50"
-          />
+          /> -->
+          {{form.lname}}
         </div>
         <div class="group">
           <label for="rollno">Roll No</label>
-          <input
+          <!-- <input
             type="text"
             name="Roll_No"
             id="rollno"
-            value="195119"
             maxlength="10"
-          />
+          /> -->
+          {{form.roll}}
         </div>
         <div class="group">
           <label for="branch">Branch</label>
-          <select id="branch" name="Branch">
+          <!-- <select id="branch" name="Branch">
             <option value="No_Branch" selected>Select Your Branch</option>
             <option value="Architecture">Architecture</option>
             <option value="Chemical Engineering">Chemical Engineering</option>
@@ -82,33 +86,33 @@
             <option value="Mechanical Engineering">Mechanical Engineering</option>
             <option value="Material Science">Material Science</option>
             <option value="Mathematics and Computing">Mathematics and Computing</option>  
-          </select>
-          <!-- <label for="branch">Branch</label>
-          <input
+           </select>
+            <label for="branch">Branch</label>
+           <input
             type="text"
             name="Branch"
             id="branch"
             value=""
             maxlength="10"
-          /> -->
-        </div>
+          />   -->
+          {{form.branch}}
+        </div> 
         <div class="group">
           <label for="phoneno">Contact No</label>
-          <input
+          <!-- <input
             type="tel"
             name="Phone_No"
             id="phoneno"
-            value="1234567890"
             maxlength="10"
-          />
-        </div>
-        <div class="group">
+          /> -->
+          {{form.phone}}
+         </div>
+         <!-- <div class="group">
           <label for="pass1">Password</label>
           <input
             type="password"
             name="password"
             id="pass1"
-            value="mypassword%3^#@"
             maxlength="50"
           />
 
@@ -121,34 +125,23 @@
             type="password"
             name="password"
             id="pass2"
-            value="mypassword%3^#@"
             maxlength="50"
           />
-        </div>
-        <div class="group">
+        </div> --> 
+         <div class="group">
           <label for="email1">E-mail</label>
-          <input
+          <!-- <input
             type="email"
             name="Email"
             id="email1"
-            value="xyz@gamil.com"
             maxlength="100"
-          />
-        </div>
-        <div class="group">
-          <label for="email2">Confirm E-mail</label>
-          <input
-            type="email"
-            name="Email"
-            id="email2"
-            value="xyz@gmail.com"
-            maxlength="50"
-          />
+          /> -->
+          {{form.email}}
         </div>
         <input id="button" type="submit" value="Update Info" />
       </form>
     </div>
-    <script>
+    <!--<script>
       function showpass() {
         var x = document.getElementById("pass1");
         var y = document.getElementById("pass2");
@@ -162,5 +155,6 @@
         }
       }
     </script>
+  -->
   </body>
 </html>
