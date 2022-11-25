@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +7,21 @@
     text-decoration: none;
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 760px) {
     body {
         font-size: 1.25vw;
     }
 
     .wrapper .sidebar {
-        width: 15%;
+        width: 13.1%;
+    }
+
+    .wrapper .msg {
+        margin-left: 13.1%;
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 760px) {
     body {
         font-size: 2vw;
     }
@@ -24,26 +29,47 @@
     .wrapper .sidebar {
         width: 30%;
     }
+
+    .wrapper .msg {
+        margin-left: 30%;
+    }
 }
 
-
-a {
+a:link {
     text-decoration: none;
 }
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
 
 .logout {
     color: #bdb8d7;
     display: block;
 }
 
-body {
-    background-color: white;
-}
 
 .wrapper {
     position: relative;
+    background-color: #000066;
 }
 
+.wrapper .msg {
+    background-color: #DCDCDC;
+    min-height: 100vh;
+    padding-left: 20px;
+    text-align: center;
+    border-radius: 50px 0px 0px 50px;
+}
 
 .wrapper .profile-button {
     float: right;
@@ -52,34 +78,62 @@ body {
 .wrapper .sidebar {
     position: fixed;
     height: 100%;
-    background: darkblue;
+    background-color: #000066;
     padding: 20px 0;
+    font-family: 'Philosopher', sans-serif;
 }
 
 
-.wrapper .sidebar .top {
-    display: flex;
-}
 
-.wrapper .sidebar .top h2 {
+.wrapper .sidebar .top h4 {
     color: white;
     text-align: center;
     margin-bottom: 10px;
 }
 
 .wrapper .sidebar ul li {
-    padding: 10px;
+    padding: 20px;
+    border-radius: 20px 0px 0px 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     border-top: 1px solid rgba(225, 225, 225, 0.05);
 }
 
 .wrapper .sidebar ul li a {
-    color: #bdb8d7;
+    color : white;
     display: block;
 }
 
-.wrapper .sidebar ul li:hover {
-    background: #594f8d;
+.nav_ele {
+    text-align: center;
+}
+
+.nav_ele:hover{
+    background: white;
+}
+
+.on{
+    background: white;
+}
+
+.nav_ele:hover i {
+    color: black
+}
+
+.wrapper .sidebar .on i {
+    color: black
+}
+
+.wrapper .sidebar .hide {
+    display: none;
+}
+
+.wrapper .sidebar .nav_ele:hover .hide{
+    color: black;
+    display: inline;
+}
+.wrapper .sidebar .on .hide{
+    color: black;
+    display: inline;
 }
 
 .btn-circle.btn-xl {
@@ -91,8 +145,8 @@ body {
     text-align: left;
 }
 
-.wrapper .profile-button .dropdown .dot{
-    position:relative;
+.wrapper .profile-button .dropdown .dot {
+    position: relative;
     left: calc(50% - 4px);
-    top: calc(50% - 10px); /* 50% - 3/4 of icon height */
+    top: calc(50% - 10px);
 }
