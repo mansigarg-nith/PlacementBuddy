@@ -1,0 +1,128 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block mymessage %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+  h1 {
+    font-family: 'Alfa Slab One', cursive;
+  }
+
+  .table {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+    border-color: #DCDCDC;
+    border-collapse: collapse;
+    margin-left: 10px;
+    font-family: 'Kanit', sans-serif;
+  }
+
+
+  .table th {
+    font-size: larger;
+    padding: 3px 10px;
+  }
+
+
+  .table .thead {
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .table td {
+    font-size: larger;
+    color: white;
+    font-size: 1.25vw;
+    position: relative;
+    background-color: #B22202;
+    padding-left: 0px;
+    border-bottom: 2px solid #DCDCDC;
+    border-top: 2px solid #DCDCDC;
+  }
+
+  .table td:last-child {
+    border-radius: 0 20px 20px 0;
+  }
+
+  .table tr:hover td {
+    background-color: #ffa500;
+  }
+</style>
+
+<script>
+  function convertDate(d) {
+    var p = d.split("/");
+    return +(p[2] + p[1] + p[0]);
+  }
+
+  function sortByDate() {
+    var tbody = document.querySelector("#comps tbody");
+    // get trs as array for ease of use
+    var rows = [].slice.call(tbody.querySelectorAll("tr"));
+
+    rows.sort(function (a, b) {
+      return convertDate(a.cells[3].innerHTML) - convertDate(b.cells[3].innerHTML);
+    });
+
+    rows.forEach(function (v) {
+      tbody.appendChild(v); // note that .appendChild() *moves* elements
+    });
+  }
+</script>
+
+
+<div class="container-md" style="padding-top: 10px;">
+  <h1>Drive</h1>
+</div>
+
+<div class="btn-group" style="float: right; margin-right: 10px;">
+  <button type="button" class="btn btn-secondary" onclick="sortByDate()">
+    <i class="fa-regular fa-clock"></i> Sort by date </button>
+</div>
+<div class="companies" style="margin-right: 120px; margin-top: 50px;">
+  <table class="table" id="comps">
+    <thead class="thead">
+      <tr class="table-dark">
+        <th scope="col">Company Name</th>
+        <th scope="col">Eligible Branches</th>
+        <th scope="col">Eligible Batches</th>
+        <th scope="col">Date of Drive</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Accenture</td>
+        <td>All</td>
+        <td>B.Tech, M.Tech</td>
+        <td>23/08/2022</td>
+      </tr>
+      <tr>
+        <td>Wells Fargo</td>
+        <td>Circuital</td>
+        <td>B.Tech, M.Tech</td>
+        <td>05/09/2022</td>
+      </tr>
+      <tr>
+        <td>Increff</td>
+        <td>C.S.E</td>
+        <td>B.Tech, M.Tech</td>
+        <td>20/07/2022</td>
+      </tr>
+      <tr>
+        <td>Yellow.Ai</td>
+        <td>Circuital</td>
+        <td>B.Tech, M.Tech</td>
+        <td>15/09/2022</td>
+      </tr>
+      <tr>
+        <td>Oracle</td>
+        <td>All</td>
+        <td>B.Tech, M.Tech</td>
+        <td>11/08/2022</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}
