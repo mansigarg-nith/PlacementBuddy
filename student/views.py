@@ -23,7 +23,7 @@ def profileUpdate(request):
                     form.instance.user = request.user
                 #form.instance.user = request.user
                 form.save()
-                return redirect('studentlogin')
+                return redirect('dashboard')
             else:
                 print("no")
                 print(form)

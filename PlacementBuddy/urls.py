@@ -20,9 +20,10 @@ urlpatterns = [
     path('student/', include('student.urls')),
     path('company/', include('company.urls')),
     path('user/', include('logapp.urls')),
-    # path('drive/', include('drive.urls')),
+    path('drive/', include('drive.urls')),
     path('',include('home.urls')),
 
     path('experience/', include('experience.urls')),
     path('admin/', admin.site.urls),
+    path('stats/',include('stats.urls')),
 ]

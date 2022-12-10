@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'student',
     'drive',
+    'stats',
     'company',
     'experience',
     'logapp',
@@ -65,7 +66,7 @@ ROOT_URLCONF = 'PlacementBuddy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates/logapp', 'templates/student', 'templates/company', 'templates/home','templates/drive', 'templates/experience',],
+        'DIRS': ['templates','templates/logapp', 'templates/stats','templates/student', 'templates/company', 'templates/home','templates/drive', 'templates/experience',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

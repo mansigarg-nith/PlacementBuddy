@@ -1,6 +1,7 @@
 from django.db import models
 from student.models import Branch
 from company.models import Company
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Year(models.Model):
@@ -13,8 +14,8 @@ class Drive(models.Model):
     company = models.ForeignKey('company.Company', on_delete=models.CASCADE)
     profile = models.CharField(max_length=100)
     ctc = models.CharField(max_length=100)
-    breakdown = models.TextField(max_length=500)
-    job_desc = models.TextField(max_length=2000)
+    breakdown = RichTextField()
+    job_desc = RichTextField()
     from_date = models.DateField()
     to_date = models.DateField()
     year = models.ForeignKey(Year, on_delete=models.CASCADE)

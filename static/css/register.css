@@ -30,10 +30,13 @@ a {
 .login-wrap {
     width: 100%;
     margin: auto;
+    margin-top: 10px;
     max-width: 525px;
-    min-height: 862px;
+    min-height: 720px;
     position: relative;
     background: url() no-repeat center;
+    background-color: black;
+    border-radius: 5%;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 
@@ -42,7 +45,7 @@ a {
     width: 81%;
     height: 87%;
     position: absolute;
-    padding: 50px 63px 36px 54px;
+    /* padding: 50px 63px 36px 54px; */
     background-color: #000000e6;
 }
 .sign-in{

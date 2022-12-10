@@ -14,6 +14,8 @@ from django.core.mail import EmailMessage
 
 from .tokens import account_activation_token
 
+
+
 # Create your views here.
 def login(request):
     if request.method == 'POST':
@@ -22,9 +24,10 @@ def login(request):
         user = auth.authenticate(username = username, password=password)
         if user is not None:
             #print(user.is_active)
-            context = {'user' : request.user}
+            #context = {'user' : request.user}
             auth.login(request,user)
-            return render(request,'navbar.html',context)
+
+            return redirect('/dashboard')
         else:
             #print(False)
             print("your credentials are wrong")

@@ -1,0 +1,156 @@
+{% extends 'placement/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+              <section class="ftco-section bg-light">
+				<div class="sidebar">
+					<div class="sidebar_main">
+					  <ul>
+						<li>
+						  <a href="{%url 'dashboard'%}" title="Homepage">
+							<i class="fas fa-home dash"></i>
+						  </a>
+						</li>
+						<li>
+						  <a href="{%url 'experiencelist'%}" title="Experience">
+							<i class="fa-solid fa-magnifying-glass dash"></i>
+						  </a>
+						</li>
+						<li>
+						  <a href="{%url 'writeExperience' %}" title="Post Experience">
+							<i class="fa-solid fa-pencil dash"></i>
+						  </a>
+						</li>
+						<li>
+						  <a href="{%url 'index' %}" title="Statistics">
+							<i class="fa-sharp fa-solid fa-chart-simple dash"></i>
+						  </a>
+						</li>
+						<li>
+						  <a href="#" title="Resources">
+							<i class="fas fa-hand-holding-usd"></i>
+						  </a>
+						</li>
+						<li>
+						  <a href="{%url 'showdrive'%}" title="Drives">
+							<i class="fas fa-cog"></i>
+						  </a>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+          			<div class="container">
+          				<div class="row">
+          					<div class="col-lg-9 pr-lg-5">
+          						<div class="row justify-content-center pb-3">
+          		          <div class="col-md-12 heading-section ftco-animate">
+          		          	<span class="subheading">NITH</span>
+          		            <h2 class="mb-4">All Offers Number of Offer Wise of Batch {{ year_no }}</h2>
+                          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for company names..">
+          		          </div>
+          		        </div>
+
+                      <div class="row">
+          							<div class="col-md-12 ftco-animate">
+
+                          <ul id="myUL">
+                          {% for x in page_obj %}
+                          <li><a href="{% url 'companydetail' x.id%}">
+          		            <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
+          		              <div class="one-third mb-4 mb-md-0">
+          		                <div class="job-post-item-header d-flex align-items-center">
+          		                  <h2 class="mr-3 text-black"><b>{{ x.name }}</b></h2>
+          		                  <div class="badge-wrap">
+            		                   <span class="bg-primary text-white badge py-2 px-3">{% if x.total_offers == 1%} {{ x.total_offers }} Offer {% elif x.total_offers != -1 %}  {{ x.total_offers }} Offers {% else %} Unknown Number of Offers {% endif %}</span>
+          		                  </div>
+          		                </div>
+
+          		                <div class="job-post-item-body d-block d-md-flex">
+          		                  <!--<div class="mr-3"><span class="icon-layers"></span>-->
+          											<font color ="black">
+                                <div> <span class="icon-my_location"></span> <span>Base  {{ x.base }}L </span>
+
+          		                  <span class="icon-my_location"></span> <span> CTC {{ x.ctc }}</span>
+          											<span class="icon-my_location"></span> <span>CGPA Cutoff {{ x.cgpa }}</span></div>
+          											</font>
+          		                </div>
+          		              </div>
+
+          		            </div>
+                          </a></li>
+          								{% endfor %}
+                          </ul>
+						  <center>
+							{%if page_obj.has_previous %} {# whether the previous page exists #}
+								<a href="?page={{page_obj.previous_page_number}}"><</a> {# link to the prev page #}
+							{% endif %}
+							<span>{{page_obj.number}}</span> {# the current page number #}
+							
+							{%if page_obj.has_next %} {# whether the next page exists #}
+								<a href="?page={{page_obj.next_page_number}}">></a> {# link to the next page #}
+							{% endif %}
+						</center>
+
+          		          </div><!-- end -->
+                        </div>
+          <!--
+          							<div class="col-md-12 ftco-animate">
+          		            <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
+          		              <div class="one-third mb-4 mb-md-0">
+          		                <div class="job-post-item-header d-flex align-items-center">
+          		                  <h2 class="mr-3 text-black"><a href="#">Full Stack Developer</a></h2>
+          		                  <div class="badge-wrap">
+          		                   <span class="bg-warning text-white badge py-2 px-3">Fulltime</span>
+          		                  </div>
+          		                </div>
+          		                <div class="job-post-item-body d-block d-md-flex">
+          		                  <div class="mr-3"><span class="icon-layers"></span> <a href="#">Google, Inc.</a></div>
+          		                  <div><span class="icon-my_location"></span> <span>Western City, UK</span></div>
+          		                </div>
+          		              </div>
+
+          		              <div class="one-forth ml-auto d-flex align-items-center mt-4 md-md-0">
+          		              	<div>
+          			                <a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2">
+          			                	<span class="icon-heart"></span>
+          			                </a>
+          		                </div>
+          		                <a href="job-single.html" class="btn btn-primary py-2">Apply Job</a>
+          		              </div>
+          		            </div>
+          		          </div><!-- end -->
+
+
+          		      </div>
+                    </div>
+                    </div>
+                    </section>
+
+                    <script>
+                    function myFunction() {
+                      // Declare variables
+                      var input, filter, ul, li, a, i, txtValue;
+                      input = document.getElementById('myInput');
+                      filter = input.value.toUpperCase();
+                      ul = document.getElementById("myUL");
+                      li = ul.getElementsByTagName('li');
+
+                      // Loop through all list items, and hide those who don't match the search query
+                      for (i = 0; i < li.length; i++) {
+                        a = li[i].getElementsByTagName("a")[0];
+                        txtValue = a.textContent || a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          li[i].style.display = "";
+                        } else {
+                          li[i].style.display = "none";
+                        }
+                      }
+                    }
+                    </script>
+
+
+{% endblock %}

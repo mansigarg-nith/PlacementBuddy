@@ -1,58 +1,126 @@
-{% load static %}
-<!doctype html>
+ {% load static %}
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/bcc7e27234.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="{% static 'css/navbar.css' %}" /> -->
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    <title>Homepage_after_login</title>
+  </head>
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-
-  <!-- Font-awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Dashboard</title>
-</head>
-
-<body>
-  <div class="wrapper">
-    <div class="sidebar">
-      <div class="top">
-        <h4>Placement Buddy</h4>
+  <body>
+    <div class="container">
+      <div class="topbar">
+        <div class="logo">
+          <h2>Placement <span>Buddy</span></h2>
+        </div>
+        <div class="greet">
+          <h3><a href="{%url 'profileupdate'%}">{{user.username}}</a></h3>
+        </div>
       </div>
-      <ul style="padding-left: 0px;">
-        <li class="nav_ele" id="home"><a href="#"><i class="fas fa-home"></i> <b class="hide" >Homepage</b> </a></li>
-        <li class="nav_ele" id="exp"><a href="#" ><i class="fa-solid fa-magnifying-glass"></i> <b class="hide" >Experiences</b></a></li>
-        <li class="nav_ele" id="post"><a href="/experience/writeExperience" target="_blank"><i class="fa-solid fa-pencil"></i> <b class="hide" >Post Experience</b></a></li>
-        <li class="nav_ele" id="statistics"><a href="#"><i class="fa-sharp fa-solid fa-chart-simple"></i> <b class="hide">Statistics</b></a></li>
-        <li class="nav_ele" id="resources"><a href="#"><i class="fa-solid fa-book"></i> <b class="hide">Resources</b></a></li>
-        <li class="nav_ele" id="drive"><a href="#"><i class="fa-solid fa-wallet"></i> <b class="hide">Drive</b></a></li>
-      </ul>
-    </div>
-    <div class="profile-button">
-      <div class="dropdown">
-        <button class="btn btn-light btn-circle btn-xl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <span class="dot"><i class="fa-solid fa-user"></i></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="{%url 'profileupdate' %}">{{user.username}}</a></li>
-          <li><a class="dropdown-item" href="/user/logout">Logout</a></li>
-        </ul>
+      <div class="sidebar">
+        <div class="sidebar_main">
+          <ul>
+            <li>
+              <a href="{%url 'dashboard'%}" title="Homepage">
+                <i class="fas fa-home dash"></i>
+              </a>
+            </li>
+            <li>
+              <a href="{%url 'experiencelist'%}" title="Experience">
+                <i class="fa-solid fa-magnifying-glass dash"></i>
+              </a>
+            </li>
+            <li>
+              <a href="{%url 'writeExperience' %}" title="Post Experience">
+                <i class="fa-solid fa-pencil dash"></i>
+              </a>
+            </li>
+            <li>
+              <a href="{%url 'index' %}" title="Statistics">
+                <i class="fa-sharp fa-solid fa-chart-simple dash"></i>
+              </a>
+            </li>
+            <li>
+              <a href="{%url 'resources' %}" title="Resources">
+                <i class="fas fa-hand-holding-usd"></i>
+              </a>
+            </li>
+            <li>
+              <a href="{%url 'showdrive'%}" title="Drives">
+                <i class="fas fa-cog"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main">
+        <div class="container1">
+          <div class="subcont11">
+            <h2>Welcome To The Placement Buddy</h2>
+            <p>Unofficial Placement Portal For NIT Hamirpur</p>
+          </div>
+          <div class="subcont12">
+            <img src="{%static 'images/21.jpg'%}" alt="Picture" id="container1_image" />
+          </div>
+        </div>
+        <div class="container3">
+          <div class="subcont31">
+            <img src="{%static 'images/stat.jpg'%}" alt="Picture" id="container3_image" />
+          </div>
+          <div class="subcont32">
+            <h2>Share Your Interivew Experience With Your Juniors</h2>
+            <p>
+              Any Final or Super Final Year Student can share their interview
+              experience with us.
+            </p>
+          </div>
+        </div>
+        <div class="container4">
+          <div class="subcont41">
+            <h2>Presentation of Statistics of Previous Year Placements</h2>
+            <p>
+              Users can check Previous Year Placement Records in Graphical Form.
+            </p>
+          </div>
+          <div class="subcont42">
+            <img src="{%static 'images/stat.jpg'%}" alt="Picture" id="container4_image" />
+          </div>
+        </div>
+        <div class="container5">
+          <div class="subcont51">
+            <img src="{%static 'images/stat.jpg'%}" alt="Picture" id="container5_image" />
+          </div>
+          <div class="subcont52">
+            <h2>Resources Oriented To Placement Preparation</h2>
+            <p>
+              Any Final or Super Final Year Student can share their interview
+              experience with us.
+            </p>
+          </div>
+        </div>
+        <div class="container6">
+          <div class="subcont61">
+            <h2>List of Upcoming Campus Drives</h2>
+            <p>
+              All the student can check the upcoming drives to be conducted Oncampus with date and Package
+            </p>
+          </div>
+          <div class="subcont62">
+            <img src="{%static 'images/stat.jpg'%}" alt="Picture" id="container5_image" />
+          </div>
+        </div>
+        <div class="footer">
+          <div>All rights reserved.</div>
+        </div>
       </div>
     </div>
-    <div class="msg">
-      {% block mymessage %}
-      {% endblock %}
-    </div>
-  </div>
-  <input type="hidden" id="state" name="state" value="{{ state }}">
-</body>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-<script src="{% static '/js/index.js' %}"></script>
+    
+  </body>
 </html>

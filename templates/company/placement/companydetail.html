@@ -1,0 +1,89 @@
+{% extends 'placement/base.html' %}
+{%load static%}
+{% block content %}
+
+<section class="ftco-section bg-light">
+    <div class="container" >
+        <div class="row">
+            <div class="col-lg-9 pr-lg-5">
+                <div class="row justify-content-center pb-3">
+          <div class="col-md-12 heading-section ftco-animate">
+              <span class="subheading">NITH</span>
+          </div>
+        </div>
+
+    <div class="row" style="padding-left:20em; position: relative;">
+                    <div class="col-md-12 ftco-animate" style = "display: block; justify-content: center; ">
+                       <div><h1 style="display:flex;justify-content:center;font-size:2em;">{{company.first.name}}</h1></div>
+                        <!-- <table style="display:flex;justify-content:center ;" >
+                            <tr>
+                              <th>Btech</th>
+                              <th>Mtech</th>
+                              <th>MSC</th>
+                              <th>MBA</th>
+                            </tr>
+                            <tr>
+                              <td>{{company.Btech}}</td>
+                              <td>{{company.Mtech}}</td>
+                              <td>{{company.MSC}}</td>
+                              <td>{{company.MBA}}</td>
+
+                            </tr>
+                            
+                          </table>                    -->
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope = "col">Year</th>
+                                <th scope="col">Btech</th>
+                                <th scope="col">Mtech</th>
+                                <th scope="col">Dual Degree</th>
+                                <th scope="col" >Mba</th>
+                                <th scope ="col">Msc</th>
+                                <th scope ="col">Total Offers</th>
+                                <th scope ="col">Ctc Offered(Lakh)</th>
+                                
+                               
+                              </tr>
+                            </thead>
+                            {% for c in company%}
+                            <tbody>
+                              <tr>
+                                <th scope="row">{{c.year}}</th>
+                                <td>{{c.Btech}}</td>
+                                <td>{{c.Mtech}}</td>
+                                <td>{{c.Dtech}}</td>
+                                <td>{{c.MBA}}</td>
+                                <td>{{c.MSC}}</td>   
+                                <td>{{c.total_offers}}</td>  
+                                <td>{{c.ctc}}</td>  
+
+                            </tr>
+                            </tbody>
+                            {%endfor%}
+                          </table>
+                                  
+                                
+  
+
+          </div><!-- end -->
+      </div>
+
+      </div>
+  </div>
+  </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap');
+/* font-family: 'Roboto Mono', monospace;*/
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+h1{
+    margin: 0 1em;
+}
+
+h2,p{
+    
+    margin: 0;
+}
+
+.faq-card{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1em 4em 1em 2em;
+    position: relative;
+    margin: 2em;
+    transition: .3s ease;
+    overflow: hidden;
+}
+
+.toggle-btn{
+    font-size: 20px;
+    position: absolute;
+    top: .8em;
+    right: 1em;
+    cursor: pointer;
+}
+
+.toggle-btn .cross-btn{
+    display: none;
+}
+
+.ans{
+    display: none;
+    /* background-color: #f2f2f2; */
+}
+
+.faq-card.active{
+    padding-bottom: 1.5em;
+}
+/* adding background image from font-awesome */
+.faq-card.active::before,
+.faq-card.active::after{
+    content: '\f075';
+    font-family: 'Font Awesome 5 free';
+    color: rgb(220, 213, 213);
+    font-size: 7em;
+    position: absolute;
+    opacity: .2;
+    top: -6.5px;
+    left: 10px;
+    z-index: 0;
+}
+
+.faq-card.active .ans{
+    margin-top: .5em;
+    display: block;
+}
+
+.faq-card.active .toggle-btn .cross-btn{
+    display: flex;
+    /* fixing position */
+    position: relative;
+    top: .3em;
+    left: .1em;
+}
+
+.faq-card.active .toggle-btn .drop-btn{
+    display: none;
+}

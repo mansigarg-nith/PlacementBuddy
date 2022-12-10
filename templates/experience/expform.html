@@ -8,7 +8,7 @@
     <title>NITH Student Experience Form</title>
 
     <!-- Link to CSS Experience Form file -->
-    <link rel="stylesheet" href="{% static 'css/Experience_Form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/experience_form.css' %}">
     <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
 
 </head>
@@ -27,12 +27,17 @@
                 <label for="user_identity2">Keep Yourself Anonymous</label><br>
 
                 <label >Difficulty</label><br>
-                <input type="radio" name="difficulty" id="difficulty1" value="Easy" class="radio_button_color">
+                <!-- <input type="radio" name="difficulty" id="difficulty1" value="Easy" class="radio_button_color">
                 <label for="difficulty1">Easy</label>
                 <input type="radio" name="difficulty" id="difficulty2" value="Medium" class="radio_button_color">
                 <label for="difficulty2">Medium</label><br>
                 <input type="radio" name="difficulty" id="difficulty3" value="Hard" class="radio_button_color">
-                <label for="difficulty3">Hard</label><br>
+                <label for="difficulty3">Hard</label><br> -->
+                <select id="difficulty" name="difficulty">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                  </select><br>
 
                 <label for="company">Company Name </label><br>
                 <input type="text" name="user_company_name" id="company" size="40" maxlength="100" placeholder="Company's Name" required><br>

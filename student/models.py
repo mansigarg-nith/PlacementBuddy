@@ -14,6 +14,7 @@ class Student(models.Model):
     phone = models.CharField(max_length=100, blank=True, null=True)
     roll = models.CharField(max_length=100)
     branch = models.ForeignKey('Branch', on_delete=models.CASCADE)
+    linkd = models.CharField(default='',max_length=500)
 
     def __str__(self):
         return self.fname

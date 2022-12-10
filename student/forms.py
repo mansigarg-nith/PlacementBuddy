@@ -10,5 +10,5 @@ class ProfileForm(ModelForm):
     email = forms.EmailField(widget=forms.EmailInput({'readonly':True}))
     class Meta:
         model = Student
-        fields = ['fname','lname','mname','phone','roll','branch','email']
+        fields = ['fname','lname','mname','phone','roll','branch','email','linkd']
         #fields = '__all__'
