@@ -67,25 +67,26 @@ header{
 .header_box{
   display: grid;
   grid-template-columns: auto auto;
+  background-color: #0c1b35;
 }
 .dashboard_content{
-  background-color: rgba(59, 59, 59, 0.335);
+  background-color: #0c1b35;
   margin: 20px;
   border-radius: 20px;
   padding: 20px;
-  
+
 }
 .dashboard_content li{
   background-color: #a9c8fe;
   padding: 10px;
-  margin: 10px;
+  margin: 40px;
   border:1px solid rgba(0, 0, 255, 0.421);
   border-radius: 10px;
 }
 .dashboard_content li a{
-  padding: 10px;
+  padding: 20px;
   text-decoration: none;
-  font-size: 2vmin;
+  font-size: 2.5vmin;
   color:#0c1b35;
 }
 .dashboard_content li a:hover{
@@ -97,7 +98,7 @@ header{
 .header_content{
   margin: 20px;
   padding: 20px;
-  background: #0c1b35b5;
+  background: #0c1b35;
   border-radius: 20px;
   color: whitesmoke;
   text-align:left;
@@ -142,7 +143,7 @@ header{
   font-size: 3vmin;
   color:#530707;
   font-weight: bold;
-  
+
 }
 .container p{
   font-size: 2vmin;
@@ -189,12 +190,12 @@ header{
 
 /* --------------- Why NIT Hamirpur Starts Here --------------- */
 .why_nith{
-  background-color: #0c1b35;
+  background-color: #EAEAEA;
   width: 100%;
   padding: 50px;
 }
 .why_nith div{
-  color: white;
+  color: black;
 }
 .why_nith_box h3{
   text-align: center;
@@ -216,7 +217,7 @@ header{
 .why_nith_card{
   display: grid;
   grid-template-columns: auto auto auto;
-  
+
 }
 .why_nith_card div{
   font-size: 2vmin;
@@ -230,7 +231,7 @@ header{
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
-  color: white;
+  color: black;
 }
 .why_nith_card div a:hover{
   background-color: #c0c0c05f;
@@ -262,11 +263,11 @@ header{
   border-radius: 5px;
   align-items: center;
   margin: auto;
-  
+
 }
 .director_image:hover{
   border-color:#530707;
-  
+
 }
 
 .director_image img{
@@ -280,7 +281,7 @@ header{
   padding: 20px;
   text-align:left;
   font-size: 2vmin;
-  
+
 }
 .director_message a{
   text-decoration: none;
@@ -302,12 +303,12 @@ header{
 /* -------------------- Recruitment Process Begins Here ----------------- */
 .recruitment_process{
   width: 100%;
-  background-color: #0c1b35;
+  background-color: #EAEAEA;
   padding: 20px;
 }
 .recruitment_title h4{
   font-size: 4vmin;
-  color: white;
+  color: black;
   text-align: center;
   padding: 20px;
   margin: 10px;
@@ -320,12 +321,12 @@ header{
 .recruitment_box div{
   font-size: 2vmin;
   padding: 10px;
-  color: white;
+  color: black;
   background-color: #ababab4d;
   border-radius: 5px;
 }
 .recruitment_box h6{
-  color: rgb(135, 135, 251);
+  color: #4B56D2;
   font-size: 2vmin;
 }
 /* -------------------- Recruitment Process Section Ends Here ----------------- */
@@ -353,6 +354,9 @@ header{
   background-color: #b7cff8;
   padding: 20px;
   border-radius: 5px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .details{
@@ -360,7 +364,7 @@ header{
 }
 .details h5{
   font-size: 3vmin;
-  text-align: center;
+  /* text-align: center; */
   font-weight: bold;
   padding: 5px;
 }
@@ -421,7 +425,7 @@ footer div p{
 .placement_record{
   display: grid;
   grid-template-columns: auto auto;
-  
+
   }
   /* --------------- Why NIT Hamirpur ---------------- */
   .why_nith_card{
@@ -452,7 +456,7 @@ footer div p{
   }
   a:hover,a.active{
     color:red;
-  
+
   }
   #check:checked ~ul{
     left: 0;
